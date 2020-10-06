@@ -5,7 +5,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -27,8 +26,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 import static com.find_me.MainActivity.LOCATION_SETTINGS_REQUEST;
-
-import static java.lang.System.out;
 
 public final class GeoLocationFinder extends Activity implements LocationListener{
 

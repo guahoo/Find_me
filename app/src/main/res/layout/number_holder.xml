@@ -1,0 +1,651 @@
+<!-- Android - 1 -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <ImageView
+                android:id="@+id/perforation1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/ic_perforation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/button_phone_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/perforation1"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/ic_button_phone_book"
+                app:layout_constraintBottom_toBottomOf="@+id/screencall"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/screencall" />
+
+
+            <ImageView
+                android:id="@+id/lampView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/lamp"
+                app:layout_constraintBottom_toBottomOf="@+id/perforation1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/perforation1" />
+
+            <ImageView
+                android:id="@+id/screencall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/perforation1"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="9pt"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/screen_call"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/perforation1" />
+
+            <TextView
+                android:id="@+id/numbertextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/screencall"
+                android:layout_alignLeft="@id/screencall"
+                android:layout_alignTop="@id/screencall"
+                android:layout_alignEnd="@id/screencall"
+                android:layout_alignRight="@id/screencall"
+                android:text="+79162543084"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/screencall"
+                app:layout_constraintEnd_toEndOf="@+id/screencall"
+                app:layout_constraintStart_toStartOf="@+id/screencall"
+                app:layout_constraintTop_toTopOf="@+id/screencall" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/number_holder_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/bg_number_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="76dp"
+                    android:layout_marginEnd="76dp"
+                    android:gravity="center"
+                    android:stretchColumns="0,1,2">
+
+                    <TableRow
+                        android:id="@+id/row1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_1"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="1"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_2"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_2"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="2"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_3"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_3"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="3"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_4"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_4"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="4"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_5"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_5"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="5"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_6"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_6"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="6"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_7"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_7"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="7"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_8"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_8"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="8"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_9"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_9"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="9"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_10"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_10"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="*"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_11"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_11"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="0"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_12"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_12"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="#"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/row5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="14dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_13"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_13"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="1"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_14"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_14"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="2"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:id="@+id/button_bg_15"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/one_button_bg" />
+
+                            <ImageButton
+                                android:id="@+id/number_button_15"
+                                android:layout_width="54dp"
+                                android:layout_height="54dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/button_number_holder_states" />
+
+                            <TextView
+                                android:id="@+id/number_textView_15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:lineSpacingExtra="0sp"
+                                android:text="3"
+                                android:textColor="#A3ACBD"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                    </TableRow>
+
+                </TableLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <ImageView
+                android:id="@+id/perforation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="9dp"
+                android:background="@drawable/ic_perforation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</RelativeLayout>
